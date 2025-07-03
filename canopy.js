@@ -18,7 +18,7 @@ let postThickness = 10;
 let zoom = 1;
 
 function setup() {
-  createCanvas(1400, 1000, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   let uiX = 1420;
   let uiY = 20;
 
@@ -325,4 +325,8 @@ function showBOM() {
   newWindow.document.open();
   newWindow.document.write(tableHTML);
   newWindow.document.close();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
